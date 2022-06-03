@@ -5,7 +5,8 @@
 #include "MyGame.h"
 
 class Manual: public MyGame {
-    
+    public:
+        void start();
 };
 
 #endif /* Manual_h */

@@ -5,7 +5,8 @@
 #include "MyGame.h"
 
 class Automatic: public MyGame {
-    
+    public:
+        void start();
 };
 
 #endif /* Automatic_h */

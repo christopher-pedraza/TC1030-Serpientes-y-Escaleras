@@ -1,20 +1,13 @@
-/****************************************************
-TC1030 - Equipo 8
-SerpientesEscaleras
-MyGame.cpp
-*****************************************************/
+#include "Manual.h"
 
-#include "MyGame.h"
+void Manual::start() { // Iniciamos el juego
+    Player player1 = getPlayer1();
+    Player player2 = getPlayer2();
+    int turn = getTurn();
+    int MAX_TURN = getMAXTURN();
+    Dice dice = getDice();
+    Board board = getBoard();
 
-MyGame::MyGame() {
-    board 	= Board(); 		// Tablero
-    player1 = Player(1); 	// Jugador 1
-    player2 = Player(2); 	// Jugador 2
-    turn 	= 1; 			// Turno
-    dice 	= Dice(); 		// Dado
-}
-
-void MyGame::start() { // Iniciamos el juego
 	player1.setTile(1); // Establece la casilla para el jugador 1
     player2.setTile(1); // Establece la casilla para el jugador 2
     std::cout << "Press C to continue next turn, or E to end the game:" << std::endl; // Opcion para continuar o no con el juego
@@ -71,32 +64,4 @@ void MyGame::start() { // Iniciamos el juego
 	} else {// En caso contratrio, enviamos mensaje
         std::cout << "Thanks for playing!!!" << std::endl;
 	}
-}
-
-Player MyGame::getPlayer1() {
-    return player1;
-}
-Player MyGame::getPlayer2(){
-    return player2;
-}
-Board MyGame::getBoard(){
-    return board;
-}
-int MyGame::getTurn(){
-    return turn;
-}
-int MyGame::getMAXTURN(){
-    return MAX_TURN;
-}
-Dice MyGame::getDice(){
-    return dice;
-}
-int MyGame::getPenalty(){
-    return penalty;
-}
-int MyGame::getReward(){
-    return reward;
-}
-char MyGame::getGameType(){
-    return gameType;
 }
