@@ -33,6 +33,7 @@ Board::Board() {
     }
 }
 
+
 Board::Board(int _tiles, int _snakes,int _ladders){
 
     
@@ -63,10 +64,12 @@ Board::Board(int _tiles, int _snakes,int _ladders){
 // Dibujamos el tablero
 std::string Board::draw() {
     std::string brd = "";
-    for (char c : tiles) {
-        brd += c;
+    for (int i = 0;i < tiles.size();i++ ) {
+        brd += tiles[i];
         brd += " ";
+        
     }
+    std::cout<<brd<<std::endl;
     return brd;
 }
 

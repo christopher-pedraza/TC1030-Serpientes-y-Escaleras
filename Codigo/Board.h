@@ -11,6 +11,7 @@ Board.h
 //#include <stdio.h>
 //#include <cstdlib>
 #include <string>
+#include <iostream>
 #include <vector>
 #include "Snakes.h"
 #include "Ladders.h"
