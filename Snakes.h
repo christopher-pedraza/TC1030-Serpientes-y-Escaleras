@@ -1,9 +1,9 @@
 #ifndef Snakes_h
 #define Snakes_h
-
+#include "Tiles.h"
 #include <iostream>
 
-class Snakes {
+class Snakes: public Tiles {
   private:
     char identifier = 'S';
     int penalty;

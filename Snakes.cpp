@@ -6,11 +6,10 @@ Snakes::Snakes(){
 Snakes::Snakes(int _penalty){
   penalty = _penalty;
 }
-
-
 char Snakes::getIdentifier(){
   return identifier;
 }
+
 int Snakes::getPenalty(){
   return penalty;
 }

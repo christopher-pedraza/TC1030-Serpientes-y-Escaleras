@@ -21,9 +21,9 @@ class MyGame {
 	    int		turn;			// Turno
 	    int		MAX_TURN = 30;	// Numero maximo de turnos
 	    Dice	dice;			// Dado
-      int Penalty = 3;
-      int Reward = 3;
-      char Game_Type = 'M';
+      	int Penalty = 3;
+      	int Reward = 3;
+      	char Game_Type = 'M';
     
 	public:
 		MyGame();

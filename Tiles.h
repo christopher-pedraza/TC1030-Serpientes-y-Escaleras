@@ -11,7 +11,7 @@ class Tiles {
 
   public:
     Tiles();
-    char getIdentifier();
+    virtual char getIdentifier();
     
     
 };

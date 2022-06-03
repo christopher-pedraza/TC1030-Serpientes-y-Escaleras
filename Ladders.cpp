@@ -8,7 +8,6 @@ Ladders::Ladders(int _reward){
   reward = _reward;
 }
 
-
 char Ladders::getIdentifier(){
   return identifier;
 }

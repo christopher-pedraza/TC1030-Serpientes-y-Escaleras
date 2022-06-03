@@ -1,9 +1,10 @@
 #ifndef Ladders_h
 #define Ladders_h
 
+#include "Tiles.h"
 #include <iostream>
 
-class Ladders {
+class Ladders: public Tiles{
   private:
     char identifier = 'L';
     int reward;
