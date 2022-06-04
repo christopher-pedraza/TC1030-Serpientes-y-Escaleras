@@ -1,5 +1,11 @@
 #include "Automatic.h"
 
+Automatic::Automatic(): MyGame() {
+}
+
+Automatic::Automatic(int _tiles, int _snakes, int _ladders, int _penalty, int _reward, int _players, int MAX_TURN): MyGame(_tiles, _snakes, _ladders, _penalty, _reward, _players, MAX_TURN) {
+}
+
 void Automatic::start() { // Iniciamos el juego
     Player player1 = getPlayer1();
     Player player2 = getPlayer2();
@@ -8,6 +14,8 @@ void Automatic::start() { // Iniciamos el juego
     Dice dice = getDice();
     Board board = getBoard();
 
+    std::cout << "Tablero generado: " << std::endl;
+    board.draw();
 	player1.setTile(1); // Establece la casilla para el jugador 1
     player2.setTile(1); // Establece la casilla para el jugador 2
     std::cout << "Press C to continue next turn, or E to end the game:" << std::endl; // Opcion para continuar o no con el juego

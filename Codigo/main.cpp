@@ -11,9 +11,6 @@ main.cpp
 
 // Con este codigo se inicia el juego
 int main(int argc, const char * argv[]) {
-    Board table = Board();
-    table.draw();
-
     char option = 'X';
     do {
         std::cout <<  "Customize game (C) or use default values (D)?" << std::endl;
@@ -23,9 +20,36 @@ int main(int argc, const char * argv[]) {
                 Manual g; // se crea una nueva instancia del juego para poder llamarlo
                 g.start(); // inicia la ejecucion del juego
             } else if (option == 'C') {
-                /*
-                Agregar condiciones para preguntar los parámetros del juego
-                */
+                int tiles, snakes, ladders, penalty, reward, players, maxTurn;
+                char modoJuego;
+                std::cout << "Cantidad de casillas: " << std::endl;
+                std::cin >> tiles;
+                std::cout << "Cantidad de casillas con serpientes: " << std::endl;
+                std::cin >> snakes;
+                std::cout << "Cantidad de casillas con escaleras" << std::endl;
+                std::cin >> ladders;
+                std::cout << "Casillas penalizadas al caer en casilla de serpiente: " << std::endl;
+                std::cin >> penalty;
+                std::cout << "Casillas otorgadas al caer en casilla de escalera: " << std::endl;
+                std::cin >> reward;
+                std::cout << "Cantidad de jugadores: " << std::endl;
+                std::cin >> players;
+                std::cout << "Cantidad máxima de turnos: " << std::endl;
+                std::cin >> maxTurn;
+                std::cout << "Modo automático (A) o manual (M)?" << std::endl;
+                std::cin >> modoJuego;
+
+                if (modoJuego == 'A') {
+                    Automatic juegoManual = Automatic(tiles, snakes, ladders, penalty, reward, players, maxTurn);
+                    juegoManual.start();
+                } else if (modoJuego == 'M') {
+                    Manual juegoManual = Manual(tiles, snakes, ladders, penalty, reward, players, maxTurn);
+                    juegoManual.start();
+                } else {
+                    std::cout << "Modo no identificado. Se usará modo Manual." << std::endl;
+                    Manual juegoManual = Manual(tiles, snakes, ladders, penalty, reward, players, maxTurn);
+                    juegoManual.start();
+                }
             }
             break;
         }

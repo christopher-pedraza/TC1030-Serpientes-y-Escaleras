@@ -36,6 +36,14 @@ class MyGame {
 		Dice getDice();
 		int getPenalty();
 		int getReward();
+		void setPlayer1(Player _player);
+		void setPlayer2(Player _player);
+		void setBoard(Board _board);
+		void setTurn(int _turn);
+		void setMAXTURN(int _MAX_TURN);
+		void setDice(Dice _dice);
+		void setPenalty(int _penalty);
+		void setReward(int _reward);
 		virtual void start(); // Iniciamos el juego
 };
 

@@ -35,8 +35,6 @@ Board::Board() {
 
 
 Board::Board(int _tiles, int _snakes,int _ladders){
-
-    
 	// Las casillas estan en un vector de 30 posiciones, en donde cada posicion representa una casilla del tablero
     tiles = std::vector<char>(_tiles, normal.getIdentifier()); 
     int snakes  = 0; // serpientes
