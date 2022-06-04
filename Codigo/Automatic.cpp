@@ -24,7 +24,7 @@ void Automatic::start() { // Iniciamos el juego
 	// Comparamos la respuesta dada por el usuario, mientras sea diferente
 	// a "E" y el turno no haya pasado el maximo y el jugador 1 y el jugador 2
 	// se encuentren dentro del tablero
-	while(option != 'E' && turn <= MAX_TURN && player1.getTile() < 30 && player2.getTile() < 30) {
+	while(option != 'E' && turn <= MAX_TURN && player1.getTile() < board.getTileCount() && player2.getTile() < board.getTileCount()) {
         std::cout << std::to_string(turn) << " ";
         int number = dice.roll(); 
         if (turn % 2 != 0) {
@@ -59,9 +59,9 @@ void Automatic::start() { // Iniciamos el juego
     
     if (turn >= MAX_TURN) { // Si se ha superado el numero de turnos, enviamos un mensaje indicando lo sucedido al usuario
         std::cout << "The maximum number of turns has been reached..." << std::endl;
-	} else if (player1.getTile() >= 30) { // Si el jugador 1 ha recorrido todo el tablero, es decir, llega a la casilla 30, enviamos un mensaje de que el es el ganador
+	} else if (player1.getTile() >= board.getTileCount()) { // Si el jugador 1 ha recorrido todo el tablero, es decir, llega a la casilla 30, enviamos un mensaje de que el es el ganador
         std::cout << "Player 1 is the winner!!!" << std::endl;
-	} else if (player2.getTile() >= 30) { // Si el jugador 2 ha recorrido todo el tablero, es decir, llega a la casilla 30, enviamos un mensaje de que el es el ganador
+	} else if (player2.getTile() >= board.getTileCount()) { // Si el jugador 2 ha recorrido todo el tablero, es decir, llega a la casilla 30, enviamos un mensaje de que el es el ganador
         std::cout << "Player 2 is the winner!!!" << std::endl;
 	} else {// En caso contratrio, enviamos mensaje
         std::cout << "Thanks for playing!!!" << std::endl;

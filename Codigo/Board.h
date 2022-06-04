@@ -25,12 +25,14 @@ class Board {
     Tiles normal;
     Snakes snake;
     Ladders ladder;
+    int tileCount;
     
   public:
     Board();
     Board(int tiles, int snakes, int ladders);
     std::string draw();
     char getTile(int);
+    int getTileCount();
 };
 
     

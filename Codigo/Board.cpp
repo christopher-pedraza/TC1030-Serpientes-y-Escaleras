@@ -13,6 +13,7 @@ Board::Board() {
     tiles = std::vector<char>(30, normal.getIdentifier()); 
     int snakes  = 0; // serpientes
     int ladders = 0; // escaleras
+    tileCount = 30;
     
 	// Se genera de manera aleatoria las serpientes en las casillas del tablero
 	while(snakes < 3) {
@@ -35,10 +36,11 @@ Board::Board() {
 
 
 Board::Board(int _tiles, int _snakes,int _ladders){
-	// Las casillas estan en un vector de 30 posiciones, en donde cada posicion representa una casilla del tablero
+	// Las casillas estan en un vector de n posiciones, en donde cada posicion representa una casilla del tablero
     tiles = std::vector<char>(_tiles, normal.getIdentifier()); 
     int snakes  = 0; // serpientes
     int ladders = 0; // escaleras
+    tileCount = _tiles;
     
 	// Se genera de manera aleatoria las serpientes en las casillas del tablero
 	while(snakes < _snakes) {
@@ -74,4 +76,8 @@ std::string Board::draw() {
 // Obtenemos las casillas del tablero
 char Board::getTile(int index) {
     return tiles[index];
+}
+
+int Board::getTileCount() {
+    return tileCount;
 }
