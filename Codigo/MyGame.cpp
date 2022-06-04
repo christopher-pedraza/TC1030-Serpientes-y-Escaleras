@@ -29,6 +29,8 @@ MyGame::MyGame(int _tiles, int _snakes, int _ladders, int _penalty, int _reward,
 }
 
 void MyGame::start() { // Iniciamos el juego
+    std::cout << "Tablero generado: " << std::endl;
+    board.draw();
 	player1.setTile(1); // Establece la casilla para el jugador 1
     player2.setTile(1); // Establece la casilla para el jugador 2
     std::cout << "Press C to continue next turn, or E to end the game:" << std::endl; // Opcion para continuar o no con el juego
