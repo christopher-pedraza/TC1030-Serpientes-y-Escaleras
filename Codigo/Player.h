@@ -24,6 +24,7 @@ class Player {
 	    Player(int);
 	    std::string draw();
 	    void setTile(int);
+		void setNumber(int _number);
 	    int getTile();
 };
 

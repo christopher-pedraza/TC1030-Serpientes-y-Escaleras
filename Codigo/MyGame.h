@@ -14,10 +14,10 @@ MyGame.h
 // Clase que contiene todos los atributos y metodos
 // necesarios para representar el juego
 class MyGame {
-	private:
+	protected:
 	    Board	board;			// Tablero
-	    Player	player1;		// Jugador 1
-	    Player	player2;		// Jugador 2
+		int numberPlayers;
+	    Player	players[2];
 	    int		turn;			// Turno
 	    int		MAX_TURN = 30;	// Numero maximo de turnos
 	    Dice	dice;			// Dado

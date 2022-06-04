@@ -21,6 +21,10 @@ std::string Player::draw() {
     return std::to_string(number) + " " + std::to_string(tile);
 }
 
+void Player::setNumber(int _number){
+    number = _number;
+}
+
 void Player::setTile(int t) { // Obtenemos las casillas
     if (t < 1) {
 		tile = 1;
