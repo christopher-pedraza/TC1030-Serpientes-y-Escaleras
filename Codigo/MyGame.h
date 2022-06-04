@@ -23,11 +23,11 @@ class MyGame {
 	    Dice	dice;			// Dado
       	int		penalty = 3;
       	int		reward = 3;
-      	char	gameType = 'M';
+		//Player	players[];
     
 	public:
 		MyGame();
-    	MyGame(int tiles, int snakes,int ladders, int penalty, int reward,int players, char Game_Mode);
+    	MyGame(int _tiles, int _snakes, int _ladders, int _penalty, int _reward, int _players, int MAX_TURN);
 		Player getPlayer1();
 		Player getPlayer2();
 		Board getBoard();
@@ -36,7 +36,6 @@ class MyGame {
 		Dice getDice();
 		int getPenalty();
 		int getReward();
-		char getGameType();
 		virtual void start(); // Iniciamos el juego
 };
 

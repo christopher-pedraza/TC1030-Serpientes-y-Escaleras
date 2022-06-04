@@ -28,7 +28,7 @@ class Board {
     
   public:
     Board();
-    Board(int tiles, int snakes,int ladders);
+    Board(int tiles, int snakes, int ladders);
     std::string draw();
     char getTile(int);
 };
