@@ -6,14 +6,10 @@
 class Tiles {
   private:
     char identifier = 'N';
-    
-    
-
+      
   public:
     Tiles();
-    virtual char getIdentifier();
-    
-    
+    virtual char getIdentifier(); 
 };
 
 
