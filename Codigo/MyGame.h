@@ -14,16 +14,17 @@ MyGame.h
 // Clase que contiene todos los atributos y metodos
 // necesarios para representar el juego
 class MyGame {
-	private:
+	protected:
 	    Board	board;			// Tablero
 	    Player	player1;		// Jugador 1
 	    Player	player2;		// Jugador 2
 	    int		turn;			// Turno
-	    int		MAX_TURN = 30;	// Numero maximo de turnos
+	    int		MAX_TURN;		// Numero maximo de turnos
 	    Dice	dice;			// Dado
-      	int		penalty = 3;
-      	int		reward = 3;
-		//Player	players[];
+      	int		penalty;
+      	int		reward;
+		int		playerCount;
+		std::vector<Player> players;
     
 	public:
 		MyGame();
@@ -36,6 +37,8 @@ class MyGame {
 		Dice getDice();
 		int getPenalty();
 		int getReward();
+		int getPlayerCount();
+		std::vector<Player> getPlayers();
 		void setPlayer1(Player _player);
 		void setPlayer2(Player _player);
 		void setBoard(Board _board);
