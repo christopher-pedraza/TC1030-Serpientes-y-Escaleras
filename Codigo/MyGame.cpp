@@ -52,7 +52,7 @@ void MyGame::start() { // Iniciamos el juego
 	// se encuentren dentro del tablero
 	while(option != 'E' && turn <= MAX_TURN && !finished) {
         for (int i = 0; i < playerCount; ++i) {
-            if (players[i].getTile() >= board.getTileCount()) {
+            if (players[i].getTile() > board.getTileCount()) {
                 finished = true;
                 break;
             }

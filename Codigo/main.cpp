@@ -23,7 +23,6 @@ int main(int argc, const char * argv[]) {
                 int tiles, snakes, ladders, penalty, reward, players, maxTurn;
                 char modoJuego;
 
-                /*
                 std::cout << "Cantidad de casillas: " << std::endl;
                 std::cin >> tiles;
                 std::cout << "Cantidad de casillas con serpientes: " << std::endl;
@@ -40,16 +39,6 @@ int main(int argc, const char * argv[]) {
                 std::cin >> maxTurn;
                 std::cout << "Modo automático (A) o manual (M)?" << std::endl;
                 std::cin >> modoJuego;
-                */
-
-                tiles = 20;
-                snakes = 3;
-                ladders = 3;
-                penalty = 3;
-                reward = 3;
-                players = 3;
-                maxTurn = 40;
-                modoJuego = 'A';
 
                 if (modoJuego == 'A') {
                     Automatic juegoAutomatico = Automatic(tiles, snakes, ladders, penalty, reward, players, maxTurn);

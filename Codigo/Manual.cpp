@@ -23,7 +23,7 @@ void Manual::start() { // Iniciamos el juego
 	while(option != 'E' && turn <= MAX_TURN && !finished) {
         std::cout << board.getTileCount();
         for (int i = 0; i < playerCount; ++i) {
-            if (players[i].getTile() >= board.getTileCount()) {
+            if (players[i].getTile() > board.getTileCount()) {
                 finished = true;
                 break;
             }
