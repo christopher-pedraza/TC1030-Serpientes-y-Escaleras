@@ -22,6 +22,7 @@ int main(int argc, const char * argv[]) {
             } else if (option == 'C') {
                 int tiles, snakes, ladders, penalty, reward, players, maxTurn;
                 char modoJuego;
+
                 std::cout << "Cantidad de casillas: " << std::endl;
                 std::cin >> tiles;
                 std::cout << "Cantidad de casillas con serpientes: " << std::endl;
@@ -40,8 +41,8 @@ int main(int argc, const char * argv[]) {
                 std::cin >> modoJuego;
 
                 if (modoJuego == 'A') {
-                    Automatic juegoManual = Automatic(tiles, snakes, ladders, penalty, reward, players, maxTurn);
-                    juegoManual.start();
+                    Automatic juegoAutomatico = Automatic(tiles, snakes, ladders, penalty, reward, players, maxTurn);
+                    juegoAutomatico.start();
                 } else if (modoJuego == 'M') {
                     Manual juegoManual = Manual(tiles, snakes, ladders, penalty, reward, players, maxTurn);
                     juegoManual.start();

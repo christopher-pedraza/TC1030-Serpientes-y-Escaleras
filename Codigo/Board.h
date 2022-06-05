@@ -20,7 +20,7 @@ Board.h
 // Clase tablero que contiene el vector en que representa las 
 // casillas y los metodos correspondientes para generar el tablero
 class Board {
-  private:
+  protected:
     std::vector<char> tiles;
     Tiles normal;
     Snakes snake;

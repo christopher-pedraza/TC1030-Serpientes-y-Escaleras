@@ -15,7 +15,7 @@ Player.h
 // al jugador, dibujamos el tablero y vamos obteniendo las casillas
 
 class Player {
-	private:
+	protected:
 	    int number; // Numero de jugador
 	    int tile;   // Casilla
     
