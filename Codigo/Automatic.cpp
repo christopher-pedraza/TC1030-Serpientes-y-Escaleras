@@ -23,7 +23,7 @@ void Automatic::start() { // Iniciamos el juego
 	// se encuentren dentro del tablero
 	while(turn <= MAX_TURN && !finished) {
         for (int i = 0; i < playerCount; ++i) {
-            if (players[i].getTile() > board.getTileCount()) {
+            if (players[i].getTile() >= board.getTileCount()) {
                 finished = true;
                 break;
             }
