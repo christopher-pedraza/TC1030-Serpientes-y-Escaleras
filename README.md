@@ -1,4 +1,22 @@
-# TC1030-Serpientes-y-Escaleras
+# TC1030-actividad-herencia
 
-## Diagrama UML
-![serpientes y escaleras](https://user-images.githubusercontent.com/62347713/172031642-725dfee9-3be8-4ffb-a705-db5d5de73f3d.png)
+## PARA COMPILAR EL PROGRAMA
+### WINDOWS:
+1) Utiliza g++ para compilar EL programa con la siguiente instrucción desde línea de comandos:  
+> g++ -o main ./*.cpp && ./main
+2) Una vez compilado, se puede probar el programa desde una línea de comandos con la siguiente instrucción: 
+> main.exe
+
+### PROVISTO POR LA DOCUMENTACIÓN:
+1) Utiliza g++ para compilar EL programa con la siguiente instrucción desde línea de comandos:  
+> g++ snakes.cpp -o snakes.out
+2) Una vez compilado, se puede probar el programa desde una línea de comandos con la siguiente instrucción: 
+> ./snakes.out
+
+
+## JUSTIFICACIÓN DE PROGRAMACIÓN ORIENTADA A OBJETOS
+En este programa, se utilizó la herencia y el polimorfismo en varias clases: Boards heredó Ladders, Snakes y Tiles; MyGame heredó Board, Dice, Player, Automatic y Manual. Además, MyGame utilizó el polimorfismo con Automatic y Manual para poder usar el mismo método solo cambiando algunas líneas de código. El motivo de esta decisión es que los atributos y métodos de cada objeto eran necesarios para el funcionamiento final del juego, pero de incluir todo en una misma clase, aparte de no haber mucho orden, sería dificil para una persona que esté revisando el código. De esta manera, la persona puede relacionar el programa con objetos de la vida real con ciertos atributos y funciones que puede hacer dicho objeto, al igual que todo está presentado de una manera más entendible. Adicionalmente, esto permite la reutilización de código tanto dentro de este proyecto como para proyectos alternos. En el caso de este proyecto, si se necesita hacer varias copias de un mismo objeto, solo se necesita crear una clase como plantilla y de allí se hacen diversas instancias. En el caso de un proyecto externo, debido a que está separado por objetos, si un proyecto necesita incluir el mismo objeto, puede solo reutilizar ese código, mientras que si los atributos y métodos del objeto estuvieran entrelazados con la clase principal, sería más complicado este proceso.
+
+
+## DOCUMENTACIÓN
+![Documentacion](https://user-images.githubusercontent.com/62347713/170847243-cf610a76-561b-4e62-9913-64501cc6e75a.png)
