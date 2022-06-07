@@ -19,4 +19,4 @@ En este programa, se utilizó la herencia y el polimorfismo en varias clases: Bo
 
 
 ## DOCUMENTACIÓN
-![Documentacion](https://user-images.githubusercontent.com/62347713/170847243-cf610a76-561b-4e62-9913-64501cc6e75a.png)
+![class_diagram](https://user-images.githubusercontent.com/62347713/172414521-97372df4-49d4-408c-8c1c-50e88f759662.png)
