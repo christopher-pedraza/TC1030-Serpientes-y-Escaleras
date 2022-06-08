@@ -7,6 +7,8 @@ Automatic::Automatic(int _tiles, int _snakes, int _ladders, int _penalty, int _r
 }
 
 void Automatic::start() { // Iniciamos el juego
+    Turn turnObj;
+    
     std::cout << "Tablero generado: " << std::endl;
     board.draw();
     for (int i = 0; i < playerCount; ++i) {
@@ -30,18 +32,21 @@ void Automatic::start() { // Iniciamos el juego
         }   
 
         if (!finished) {
-            std::cout << std::to_string(turn) << " ";
+            turnObj.setTurn(turn);
             int number = dice.roll(); 
-            std::cout << players[localTurn].draw() << " " << number << " ";
+            turnObj.setPlayerInfo(players[localTurn].draw());
+            turnObj.setDiceNumber(number);
             players[localTurn].setTile(players[localTurn].getTile() + number);
             char c = board.getTile(players[localTurn].getTile() - 1);
-            std::cout << c << " ";
+            turnObj.setBoardTile(c);
             if (c == 'S') { // Si caemos en una serpiente restamos el penalty (penalty)
                 players[localTurn].setTile(players[localTurn].getTile() - penalty);
             } else if (c == 'L') { // Si caemos en una escalera sumamos 3 (reward) 
                 players[localTurn].setTile(players[localTurn].getTile() + reward);
             }
-            std::cout << players[localTurn].getTile() << std::endl;
+            turnObj.setNewTile(players[localTurn].getTile());
+
+            std::cout << turnObj;
 
             localTurn++;
             if (localTurn == playerCount) {

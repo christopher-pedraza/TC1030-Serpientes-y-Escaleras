@@ -12,7 +12,4 @@ class Tiles {
     virtual char getIdentifier(); 
 };
 
-
-
-
 #endif /* Tiles_h */
