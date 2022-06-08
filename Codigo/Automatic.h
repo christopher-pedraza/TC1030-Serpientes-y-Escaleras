@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "MyGame.h"
+#include "Turn.h"
 
 class Automatic: public MyGame {
     public:
