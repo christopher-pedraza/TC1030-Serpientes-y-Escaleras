@@ -55,9 +55,6 @@ int main(int argc, const char * argv[]) {
             break;
         }
     } while(true);
-    
-    std::cout<<"hola";
-
 
     return 0;
 }
