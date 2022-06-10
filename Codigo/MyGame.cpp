@@ -14,8 +14,10 @@ MyGame::MyGame() {
     turn 	    = 1; 			// Turno
     dice 	    = Dice(); 		// Dado
     MAX_TURN    = 30;	        // Numero maximo de turnos
-    penalty     = 3;
-    reward      = 3;
+    Snakes snake;
+    Ladders ladder;
+    penalty = snake.getPenalty();
+    reward = ladder.getReward();
     playerCount = 2;
     players.push_back(Player(1));
     players.push_back(Player(2));
@@ -29,7 +31,10 @@ MyGame::MyGame(int _tiles, int _snakes, int _ladders, int _penalty, int _reward,
     dice 	      = Dice(); 		// Dado
     MAX_TURN      = _MAX_TURN;
     penalty       = _penalty;
-    reward        = _reward;
+    snake = Snakes(_penalty);
+    ladder = Ladders(_reward);
+    penalty = snake.getPenalty();
+    reward = ladder.getReward();
     playerCount   = _players;
     for (int i = 0; i < playerCount; ++i) {
         players.push_back(Player(i+1));
@@ -71,7 +76,9 @@ void MyGame::start() { // Iniciamos el juego
                 char c = board.getTile(players[localTurn].getTile() - 1);
                 turnObj.setBoardTile(c);
                 if (c == 'S') { // Si caemos en una serpiente restamos el penalty (penalty)
-                    players[localTurn].setTile(players[localTurn].getTile() - penalty);
+                    snake.setCasilla(players[localTurn].getTile());
+                  
+                    players[localTurn].setTile(snake + snake);
                 } else if (c == 'L') { // Si caemos en una escalera sumamos 3 (reward) 
                     players[localTurn].setTile(players[localTurn].getTile() + reward);
                 }

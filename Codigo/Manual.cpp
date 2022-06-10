@@ -40,7 +40,8 @@ void Manual::start() { // Iniciamos el juego
                 char c = board.getTile(players[localTurn].getTile() - 1);
                 turnObj.setBoardTile(c);
                 if (c == 'S') { // Si caemos en una serpiente restamos el penalty (penalty)
-                    players[localTurn].setTile(players[localTurn].getTile() - penalty);
+                    snake.setCasilla(players[localTurn].getTile());
+                    players[localTurn].setTile(snake + snake);
                 } else if (c == 'L') { // Si caemos en una escalera sumamos 3 (reward) 
                     players[localTurn].setTile(players[localTurn].getTile() + reward);
                 }
