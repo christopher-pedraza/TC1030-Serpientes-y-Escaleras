@@ -6,6 +6,8 @@ MyGame.cpp
 
 #include "MyGame.h"
 #include "Turn.h"
+#include "InvalidConfigurationException.h"
+
 
 MyGame::MyGame() {
     board 	    = Board(); 		// Tablero
@@ -38,6 +40,7 @@ MyGame::MyGame(int _tiles, int _snakes, int _ladders, int _penalty, int _reward,
 
 void MyGame::start() { // Iniciamos el juego
     Turn turnObj;
+
     std::cout << "Tablero generado: " << std::endl;
     board.draw();
     for (int i = 0; i < playerCount; ++i) {
@@ -137,3 +140,10 @@ int MyGame::getPlayerCount() {
 std::vector<Player> MyGame::getPlayers() {
     return players;
 }
+/*
+struct InvalidConfigurationException: public std::exception {
+   const char * what () const throw () {
+      return "Exception: InvalidConfigurationException";
+   }
+};
+*/
