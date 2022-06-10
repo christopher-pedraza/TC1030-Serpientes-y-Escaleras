@@ -1,4 +1,5 @@
 #include "Manual.h"
+#include "InvalidConfigurationException.h"
 
 Manual::Manual(): MyGame() {
 }
@@ -6,6 +7,21 @@ Manual::Manual(int _tiles, int _snakes, int _ladders, int _penalty, int _reward,
 }
 
 void Manual::start() { // Iniciamos el juego
+
+    // Ejemplo para usar la excepción (eliminar luego)
+    int a = 0;
+    try {
+        if (a == 0) {
+            throw InvalidConfigurationException();
+        }
+    } catch(InvalidConfigurationException& e) {
+            std::cout << e.what() << std::endl;
+            std::cout << "ERRORRRRR" << std::endl; 
+    }
+
+
+
+
     Turn turnObj;
     std::cout << "Tablero generado: " << std::endl;
     board.draw();
