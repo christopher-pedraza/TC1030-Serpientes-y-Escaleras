@@ -7,6 +7,7 @@ class Snakes: public Tiles {
   private:
     char identifier = 'S';
     int penalty;
+    int casilla = 0;
 
 
   public:
@@ -14,6 +15,9 @@ class Snakes: public Tiles {
     Snakes(int _penalty);
     char getIdentifier();
     int getPenalty();
+    int getCasilla();
+    void setCasilla(int);
+    int operator+( Snakes& );
     
     
     

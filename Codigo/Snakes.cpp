@@ -13,3 +13,15 @@ char Snakes::getIdentifier(){
 int Snakes::getPenalty(){
   return penalty;
 }
+
+int Snakes::getCasilla(){
+  return casilla;
+}
+void Snakes::setCasilla(int _casilla){
+  casilla = _casilla;
+}
+
+int Snakes::operator +(Snakes& snake){
+  
+  return (snake.getCasilla() - snake.getPenalty());
+}

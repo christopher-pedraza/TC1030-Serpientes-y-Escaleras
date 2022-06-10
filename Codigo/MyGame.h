@@ -21,8 +21,10 @@ class MyGame {
 	    int		turn;			// Turno
 	    int		MAX_TURN;		// Numero maximo de turnos
 	    Dice	dice;			// Dado
-      	int		penalty;
-      	int		reward;
+      	Snakes snake;
+    	Ladders ladder;
+    	int		penalty;
+    	int		reward;
 		int		playerCount;
 		std::vector<Player> players;
     
