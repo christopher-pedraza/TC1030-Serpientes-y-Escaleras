@@ -42,13 +42,12 @@ void Manual::start() { // Iniciamos el juego
                 }
             } catch(InvalidOptionException& e) {
                     std::cout << e.what() << std::endl;
-                    if (attempts < 5) {
-                        std::cout << "Invalid option, please press C to continue next turn or E to end the game" << std::endl;
-                    } else {
-                        std::cout << "Invalid menu choice exceeded" << std::endl;
+                    std::cout << e.message(attempts) << std::endl;
+                    
+                    attempts++;
+                    if (attempts > 5) {
                         break;
                     }
-                    attempts++;
             }
 
             if (option == 'C') { // Opcion "Continuar"

@@ -13,6 +13,7 @@ InvalidOptionException.h
 class InvalidOptionException: public std::exception {
   public:
     const char * what();
+    std::string message(int _attempts);
 };
 
 #endif /* InvalidOptionException_h */
