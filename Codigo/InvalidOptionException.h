@@ -12,7 +12,7 @@ InvalidOptionException.h
 
 class InvalidOptionException: public std::exception {
   public:
-    const char * what ();
+    const char * what();
 };
 
 #endif /* InvalidOptionException_h */
