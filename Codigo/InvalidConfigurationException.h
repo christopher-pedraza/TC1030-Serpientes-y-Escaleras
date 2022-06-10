@@ -12,7 +12,8 @@ InvalidConfigurationException.h
 
 class InvalidConfigurationException: public std::exception {
   public:
-    const char * what ();
+    const char * what();
+    std::string config(std::string param_name, int param_value);
 };
 
 #endif /* InvalidConfigurationException_h */
