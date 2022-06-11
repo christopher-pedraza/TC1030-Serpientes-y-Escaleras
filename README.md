@@ -21,4 +21,4 @@ En este programa, se utilizó la herencia y el polimorfismo en varias clases: Bo
 Para el manejo de las excepciones en el programa, se implementaron 2 excepciones customizadas, lo que permitió configurar los mensajes de salida cuando se presentaban los errores que atrapaban dichas excepciones. Una de las excepciones se utilizó para asegurarse que el usuario solo introduzca 'C' o 'E' en cada turno, y de no presionar esas teclas por un máximo de 5 ocasiones, el error terminaría el programa; antes de llegar al número máximo, solo se mostraría un mensaje de advertencia y guía. La segunda excepción se utilizó para prevenir que el usuario Introduzca parámetros iniciales incorrectos al configurar un juego customizado. En caso de hacerlo, se terminaba la ejecución del programa.
 
 ## DOCUMENTACIÓN
-![class_diagram](https://user-images.githubusercontent.com/62347713/172414521-97372df4-49d4-408c-8c1c-50e88f759662.png)
+![serpientes y escaleras](https://user-images.githubusercontent.com/62347713/173199899-8a8f5e96-9d33-4896-876f-406cb4fe8557.png)
